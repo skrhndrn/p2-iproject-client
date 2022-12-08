@@ -65,13 +65,18 @@
 })(jQuery);
 
 // Button sound effect
-function sound() {
+function soundLogin() {
     var snd = new Audio('src/assets/nyan-sound.mp3')
     snd.play()
 }
 
-function soundNav() {
+function soundRegist() {
     var snd = new Audio('src/assets/nyan-sound-2.mp3')
+    snd.play()
+}
+
+function soundLogout() {
+    var snd = new Audio('src/assets/bye-meow.mp3')
     snd.play()
 }
 
