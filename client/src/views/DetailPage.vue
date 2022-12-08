@@ -20,7 +20,7 @@ import { RouterLink, RouterView } from "vue-router";
           <div class="testimonial-img">
             <img
               class="img-fluid animated pulse infinite"
-              src="../assets/img/cats (7).jpg"
+              src="../assets/img/cats7.jpg"
               alt=""
             />
           </div>
@@ -28,7 +28,7 @@ import { RouterLink, RouterView } from "vue-router";
         <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
           <div>
             <div class="testimonial-item">
-              <img class="img-fluid mb-3" src="img/testimonial-1.jpg" alt="" />
+              <img class="img-fluid mb-3" src="" alt="" />
               <h5>Client Name</h5>
               <span class="text-primary">Profession</span>
               <p class="fs-5">

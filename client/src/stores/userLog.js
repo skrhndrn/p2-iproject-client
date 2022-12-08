@@ -5,7 +5,8 @@ import Swal from 'sweetalert2'
 export const useUserStore = defineStore("userLog", {
   state: () => {
     return {
-      baseUrl: 'http://localhost:3000',
+      // baseUrl: 'http://localhost:3000',
+      baseUrl: "https://nyan-mansion-production.up.railway.app",
       isLogin: false,
       username: {},
       formLogin: {

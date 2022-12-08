@@ -20,19 +20,19 @@
             <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
               <img
                 class="img-fluid rounded"
-                src="../assets/img/cats (3).jpg"
+                src="../assets/img/cats3.jpg"
               />
             </div>
             <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
               <img
                 class="img-fluid rounded"
-                src="../assets/img/cats (6).jpg"
+                src="../assets/img/cats6.jpg"
               />
             </div>
             <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
               <img
                 class="img-fluid rounded"
-                src="../assets/img/cats (5).jpg"
+                src="../assets/img/cats5.jpg"
               />
             </div>
           </div>

@@ -21,7 +21,7 @@ export default {
             <div class="position-relative">
               <img
                 class="img-fluid"
-                src="../assets/img/cats (7).jpg"
+                src="../assets/img/cats7.jpg"
                 alt=""
               />
               <div class="product-overlay">
@@ -53,7 +53,7 @@ export default {
             <div class="position-relative">
               <img
                 class="img-fluid"
-                src="../assets/img/cats (8).jpg"
+                src="../assets/img/cats8.jpg"
                 alt=""
               />
               <div class="product-overlay">
@@ -84,7 +84,7 @@ export default {
             <div class="position-relative">
               <img
                 class="img-fluid"
-                src="../assets/img/cats (9).jpg"
+                src="../assets/img/cats9.jpg"
                 alt=""
               />
               <div class="product-overlay">
@@ -115,7 +115,7 @@ export default {
             <div class="position-relative">
               <img
                 class="img-fluid"
-                src="../assets/img/cats (10).jpg"
+                src="../assets/img/cats10.jpg"
                 alt=""
               />
               <div class="product-overlay">

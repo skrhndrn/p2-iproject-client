@@ -7,7 +7,7 @@
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="w-100" src="../assets/img/cats (1).jpg" alt="Image" />
+          <img class="w-100" src="../assets/img/cats1.jpg" alt="Image" />
           <div class="carousel-caption">
             <div class="container">
               <div class="row justify-content-start">
