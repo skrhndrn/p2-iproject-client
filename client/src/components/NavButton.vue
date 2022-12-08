@@ -1,14 +1,14 @@
 <script>
 import { mapActions, mapWritableState } from "pinia";
 import { RouterLink, RouterView } from "vue-router";
-import { useLoginStore } from '../stores/login'
+import { useUserStore } from '../stores/userLog'
 
 export default {
   computed: {
-    ...mapWritableState(useLoginStore, ["isLogin"])
+    ...mapWritableState(useUserStore, ["isLogin"])
   },
   methods: {
-    ...mapActions(useLoginStore, ["logout"])
+    ...mapActions(useUserStore, ["logout"])
   }
 }
 </script>

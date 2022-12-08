@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 
-export const useLoginStore = defineStore("login", {
+export const useUserStore = defineStore("userLog", {
   state: () => {
     return {
       baseUrl: 'http://localhost:3000',
@@ -11,7 +11,14 @@ export const useLoginStore = defineStore("login", {
       formLogin: {
         email: "",
         password: ""
-      }
+      },
+      formRegister: {
+        username: "",
+        email: "",
+        password: "",
+        phoneNumber: "",
+        address: ""
+      },
     }
   },
   actions: {
@@ -68,6 +75,32 @@ export const useLoginStore = defineStore("login", {
       });
       this.formLogin.email = "";
       this.formLogin.password = "";
+    },
+    async registerUser() {
+      console.log('regist fn masuk');
+      try {
+        console.log('masuk bos');
+        const {data} = await axios.post(this.baseUrl + '/register', {
+          username: this.formRegister.username,
+          email: this.formRegister.email,
+          password: this.formRegister.password,
+          phoneNumber: this.formRegister.phoneNumber,
+          address: this.formRegister.address
+        })
+        console.log(data, '<<<<< data masuk');
+        this.router.replace("/login");
+        this.alert().fire({
+          icon: "success",
+          title: `Register success!`,
+        });  
+      } catch (error) {
+        console.log(error, '<<< ini errornya');
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error.message,
+        });
+      }
     },
   }
 })
