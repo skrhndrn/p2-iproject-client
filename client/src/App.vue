@@ -14,8 +14,10 @@ export default {
 </script>
 
 <template>
+
 <Navbar />
 <RouterView />
 <Footer />
 <TopPageButton />
+
 </template>

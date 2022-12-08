@@ -60,7 +60,7 @@
           <small class="agree-text">By registering your account you agree to our</small>
           <a href="#" class="terms">Terms & Conditions</a>
         </div>
-        <button onclick="soundNav()" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
+        <button onclick="soundRegist()" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
           Confirm
         </button>
       </div>

@@ -1,12 +1,24 @@
 <script>
 import { RouterLink, RouterView } from "vue-router";
+import { useLoginStore } from '../stores/login'
+import { mapActions, mapWritableState } from 'pinia'
+
+export default {
+  methods: {
+    ...mapActions(useLoginStore, ["loginUser"])
+  },
+  computed: {
+    ...mapWritableState(useLoginStore, ["formLogin"])
+  }
+}
+
 </script>
 
 <template>
   <div
     class="container-xxl-fluid mt-6 py-5 d-flex justify-content-center bg-dark footer"
   >
-    <form class="card px-1 py-4 wow fadeIn">
+    <form @submit.prevent="loginUser" class="card px-1 py-4 wow fadeIn">
       <div class="card-body">
         <img
           src="../assets/img/Nyan.png"
@@ -17,7 +29,7 @@ import { RouterLink, RouterView } from "vue-router";
         <div class="row">
           <div class="col-sm-12">
             <div class="form-group">
-              <input class="form-control" type="email" placeholder="Email" required />
+              <input v-model="formLogin.email" class="form-control" type="email" placeholder="Email" required />
             </div>
           </div>
         </div>
@@ -26,6 +38,7 @@ import { RouterLink, RouterView } from "vue-router";
             <div class="form-group">
               <div class="input-group">
                 <input
+                  v-model="formLogin.password"
                   class="form-control"
                   type="Password"
                   placeholder="Password"
@@ -39,7 +52,7 @@ import { RouterLink, RouterView } from "vue-router";
           <small class="agree-text">Not a member?</small>
           <RouterLink to="/register"><a href="#" class="terms">Register Account</a></RouterLink>
         </div>
-        <button onclick="sound()" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
+        <button onclick="soundLogin()" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
           Confirm
         </button>
       </div>
