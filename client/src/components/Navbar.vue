@@ -1,10 +1,15 @@
 <script>
 import { RouterLink, RouterView } from "vue-router";
 import NavButton from './NavButton.vue'
+import { useUserStore } from '../stores/userLog'
+import { mapState } from "pinia";
 
 export default {
   components: {
     NavButton
+  },
+  computed: {
+    ...mapState(useUserStore, ['isLogin', 'username'])
   }
 }
 </script>
@@ -44,13 +49,13 @@ export default {
       <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="" class="nav-item nav-link active">Home</a>
         <a href="" class="nav-item nav-link">About Us</a>
-        <a href="" class="nav-item nav-link">Adopt</a>
-        <div class="nav-item dropdown">
+        <a v-if="isLogin" href="" class="nav-item nav-link">Adopt</a>
+        <div v-if="isLogin" class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
             ><i class="bi bi-person-circle"></i
           ></a>
           <div class="dropdown-menu bg-light m-0">
-            <p class="dropdown-item">Hej, User!</p>
+            <p class="dropdown-item">Hej, {{username}}!</p>
             <RouterLink to="/favorites"><a href="" class="dropdown-item">Favorites</a></RouterLink>
           </div>
         </div>

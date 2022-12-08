@@ -1,11 +1,22 @@
 <script>
+import { mapActions, mapWritableState } from 'pinia'
+import { useUserStore } from '../stores/userLog'
+
+export default {
+  methods: {
+    ...mapActions(useUserStore, ["registerUser"])
+  },
+  computed: {
+    ...mapWritableState(useUserStore, ["formRegister"])
+  }
+}
 </script>
 
 <template>
   <div
     class="container-xxl-fluid mt-6 py-5 d-flex justify-content-center bg-dark footer"
   >
-    <form class="card-regist px-1 py-4 wow fadeIn">
+    <form @submit.prevent="registerUser" class="card-regist px-1 py-4 wow fadeIn">
       <div class="card-body">
         <img
           src="../assets/img/Nyan-regist.png"
@@ -19,6 +30,7 @@
               <div class="row justify-content-between text-left">
                 <div class="form-group col-sm-6 flex-column d-flex">
                   <input
+                    v-model="formRegister.username"
                     type="text"
                     class="form-control"
                     placeholder="Username"
@@ -26,12 +38,13 @@
                   />
                 </div>
                 <div class="form-group col-sm-6 flex-column d-flex">
-                  <input type="tel" class="form-control" placeholder="Phone Number" />
+                  <input v-model="formRegister.phoneNumber" type="tel" class="form-control" placeholder="Phone Number" />
                 </div>
               </div>
               <div class="row justify-content-between text-left">
                 <div class="form-group col-sm-6 flex-column d-flex">
                   <input
+                    v-model="formRegister.email"
                     type="email"
                     class="form-control"
                     placeholder="Email"
@@ -39,13 +52,14 @@
                   />
                 </div>
                 <div class="form-group col-sm-6 flex-column d-flex">
-                  <input type="password" class="form-control" placeholder="Password" required/>
+                  <input v-model="formRegister.password" type="password" class="form-control" placeholder="Password" required/>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-12 mb-3">
                   <div class="form-group">
                     <input
+                      v-model="formRegister.address"
                       class="form-control"
                       type="text"
                       placeholder="Address"

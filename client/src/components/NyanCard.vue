@@ -1,5 +1,15 @@
 <script>
 import { RouterLink, RouterView } from "vue-router";
+import { mapState } from 'pinia'
+import { useUserStore } from '../stores/userLog'
+
+export default {
+  computed: {
+    ...mapState(useUserStore, ['isLogin'])
+  }, 
+  methods: {
+  }
+}
 </script>
 
 <template>
@@ -15,12 +25,13 @@ import { RouterLink, RouterView } from "vue-router";
                 alt=""
               />
               <div class="product-overlay">
-                <RouterLink to="/cats"> <a
+                <RouterLink to="/cats/:id"> <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
                   ><i class="bi bi-info"></i
                 ></a></RouterLink>
                 <a
+                  
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
                   ><i class="bi bi-suit-heart-fill"></i
