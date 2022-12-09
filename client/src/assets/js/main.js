@@ -64,23 +64,24 @@
     
 })(jQuery);
 
-// Button sound effect
-function soundLogin() {
-    var snd = new Audio('src/assets/nyan-sound.mp3')
-    snd.play()
-}
-
-function soundRegist() {
-    var snd = new Audio('src/assets/nyan-sound-2.mp3')
-    snd.play()
-}
-
-function soundLogout() {
-    var snd = new Audio('src/assets/bye-meow.mp3')
-    snd.play()
-}
 
 $(document).ready(function(){
+    //Button Sound Effect
+    $("#regist").click(function () {
+        var snd = new Audio('src/assets/nyan-sound-2.mp3')
+        snd.play()
+    })
+
+    $("#login").click(function () {
+        var snd = new Audio('src/assets/nyan-sound.mp3')
+        snd.play()
+    })
+
+    $("#logout").click(function () {
+        var snd = new Audio('src/assets/bye-meow.mp3')
+        snd.play()
+    })
+
     //Menu Toggle Script
     $("#menu-toggle").click(function(e) {
         e.preventDefault();

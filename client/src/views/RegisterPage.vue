@@ -74,7 +74,7 @@ export default {
           <small class="agree-text">By registering your account you agree to our</small>
           <a href="#" class="terms">Terms & Conditions</a>
         </div>
-        <button @click="soundRegist()" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
+        <button id="regist" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
           Confirm
         </button>
       </div>

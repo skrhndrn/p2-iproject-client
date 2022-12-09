@@ -52,7 +52,7 @@ export default {
           <small class="agree-text">Not a member?</small>
           <RouterLink to="/register"><a href="#" class="terms">Register Account</a></RouterLink>
         </div>
-        <button @click="soundLogin()" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
+        <button id="login" type="submit" class="btn btn-primary btn-block confirm-button col-sm-12">
           Confirm
         </button>
       </div>
