@@ -60,11 +60,11 @@ export default {
                 alt=""
               />
               <div class="product-overlay">
-                <a
+                <RouterLink to="/cats/:id"> <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
                   ><i class="bi bi-info"></i
-                ></a>
+                ></a></RouterLink>
                 <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
@@ -91,11 +91,11 @@ export default {
                 alt=""
               />
               <div class="product-overlay">
-                <a
+                <RouterLink to="/cats/:id"> <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
                   ><i class="bi bi-info"></i
-                ></a>
+                ></a></RouterLink>
                 <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
@@ -122,11 +122,11 @@ export default {
                 alt=""
               />
               <div class="product-overlay">
-                <a
+                <RouterLink to="/cats/:id"> <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
                   ><i class="bi bi-info"></i
-                ></a>
+                ></a></RouterLink>
                 <a
                   class="btn btn-square btn-secondary rounded-circle m-1"
                   href=""
