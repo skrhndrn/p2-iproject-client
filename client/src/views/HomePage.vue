@@ -2,12 +2,20 @@
 import Hero from '../components/Hero.vue'
 import About from '../components/About.vue'
 import NyanCard from '../components/NyanCard.vue'
+import { useCatStore } from '../stores/cats'
+import { mapActions, mapWritableState } from 'pinia'
 
 export default {
   components: {
     Hero,
     About,
     NyanCard
+  },
+  methods: {
+    ...mapActions(useCatStore, ['fetchCats'])
+  },
+  computed: {
+    ...mapWritableState(useCatStore, ['oneCat', 'cats'])
   }
 }
 </script>
@@ -29,7 +37,7 @@ export default {
         <h1 class="mb-5">Our Nyans</h1>
       </div>
       <div class="row gx-4">
-        <NyanCard />
+        <NyanCard  />
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@ export default {
     ><RouterLink to="/login"><a v-if="!isLogin" href="" 
       ><i  class="bi bi-box-arrow-in-right"></i> Sign In</a
     ></RouterLink>
-    <a onclick="soundLogout()" v-if="isLogin" @click.prevent="logout"  href="" 
+    <a @click="soundLogout()" v-if="isLogin" @click.prevent="logout"  href="" 
       ><i class="bi bi-box-arrow-in-right"></i> Logout</a
     >
     </span>

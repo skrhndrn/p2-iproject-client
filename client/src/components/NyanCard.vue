@@ -1,13 +1,16 @@
 <script>
 import { RouterLink, RouterView } from "vue-router";
-import { mapState } from 'pinia'
+import { mapActions, mapState } from 'pinia'
 import { useUserStore } from '../stores/userLog'
+import { useCatStore } from "../stores/cats";
 
 export default {
+  props: ['cat'],
   computed: {
     ...mapState(useUserStore, ['isLogin'])
   }, 
   methods: {
+    ...mapActions(useCatStore, ['fetchCats'])
   }
 }
 </script>
